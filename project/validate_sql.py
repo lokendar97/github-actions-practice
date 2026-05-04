@@ -1,6 +1,6 @@
 import os
 
-SQL_DIR = "sql"
+SQL_DIR = "project/sql"
 
 def validate_file(filepath):
     with open(filepath, "r") as f:
