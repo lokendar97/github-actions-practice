@@ -1,1 +1,1 @@
-SELECT * FROM sales;
+DELETE * FROM sales;
