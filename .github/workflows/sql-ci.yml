@@ -1,0 +1,24 @@
+name: SQL Validation CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate-sql:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: get my code in runner
+      - uses: actions/checkout@v4
+
+      - name: get python
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run SQL validation
+        run: python validate_sql.py
